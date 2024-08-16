@@ -1,0 +1,331 @@
+/* style.css */
+
+/* blue color: #06038D
+saffron color: #FF671F
+white color: #fff
+green color: #046A38 */
+
+@import url
+('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+/* countdown CSS */
+.clock {
+    display: flex;
+    font-size: 3rem;
+}
+
+.digit-container {
+    width: 50px;
+    height: 60px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    margin: 0 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.digit {
+    width: 100%;
+    transition: 
+transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    color: #fff;
+    position: absolute;
+    top: -10px;
+}
+
+/* text container CSS */
+.text-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+    width: 33%;
+    background-color: #d5d4d4;
+    border-radius: 10px;
+    position: relative;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* Color spinner CSS */
+.spinning-flag-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.spinning-flag-color {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: 
+polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation: spin 4s linear infinite;
+}
+
+.greenPolygon {
+    background-color: #046A38;
+    transform: rotate(0deg);
+}
+
+.whitePolygon {
+    background-color: #fff;
+    transform: rotate(120deg);
+}
+
+.saffronPolygon {
+    background-color: #FF671F;
+    transform: rotate(240deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Flag CSS */
+.flag-container {
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #06038D;
+}
+
+.saffron {
+    height: 33.3%;
+    width: 100%;
+    background-color: #FF9933;
+}
+
+.white {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 33.3%;
+    width: 100%;
+    background-color: white;
+}
+
+.green {
+    height: 33.3%;
+    width: 100%;
+    background-color: #046A38;
+}
+
+/* Ashoka Chakra CSS */
+.ashok-chakra.bigger-chakra {
+    width: 29%;
+    height: 80%;
+    border: 5px solid #06038D;
+}
+
+.ashok-chakra.bigger-chakra 
+.spikes .spike::before {
+    width: 10px;
+    height: 10px;
+    top: -5px;
+    left: calc(50% - 8px);
+}
+
+.ashok-chakra.bigger-chakra 
+.spikes .spike::after {
+    width: 6px;
+    height: 50%;
+    top: -8px;
+    left: calc(50% - 5px);
+}
+
+.ashok-chakra {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #06038D;
+    margin: auto;
+}
+
+.ashok-chakra .spikes,
+.ashok-chakra .spikes .spike {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ashok-chakra .spikes .spike {
+    transform: rotate(calc(15deg * var(--i)));
+}
+
+.ashok-chakra .spikes .spike::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #06038D;
+    border-radius: 50%;
+    top: -2px;
+    left: calc(50% - 1px);
+}
+
+.ashok-chakra .spikes .spike::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 50%;
+    background: #06038D;
+    top: -4px;
+    left: calc(50% - 0px);
+    transform-origin: bottom;
+    transform: rotate(7.5deg);
+    clip-path: 
+polygon(50% 5%, 100% 50%, 50% 95%, 0% 50%);
+}
+
+.ashok-chakra::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #06038D;
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    border-radius: 50%;
+}
+
+/* slideFlag animation class */
+.slideFlag.flag-container {
+    height: 0;
+    visibility: hidden;
+    transition: all 2s ease-in-out;
+}
+
+.slideFlag.flag-container 
+.white .ashok-chakra.bigger-chakra {
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.wish-container {
+    text-align: center;
+    color: #fff;
+}
+
+
+/* Utility Classes */
+.heading1 {
+    color: #FF671F;
+    font-size: 50px;
+    padding: 5px;
+}
+
+.heading2 {
+    color: #046A38;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.para {
+    color: #06038D;
+    font-size: 20px;
+    padding: 5px;
+}
+
+/* Responsive CSS styles*/
+
+@media screen and (min-width: 769px) 
+and (max-width: 1024px) {
+    .text-container{
+        width: 75%;
+    }
+    .ashok-chakra.bigger-chakra {
+        height: 125px;
+        width: 125px;
+    }
+}
+
+@media screen and (min-width: 1025px) 
+and (max-width: 1440px) {
+    .ashok-chakra.bigger-chakra {
+        width: 160px;
+        height: 161px;
+    }
+}
+
+@media screen and (min-width: 1441px) 
+and (max-width: 2560px) {
+    .ashok-chakra.bigger-chakra {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 431px) 
+and (max-width: 768px) {
+    .text-container{
+        width: 62%;
+    }
+    .ashok-chakra.bigger-chakra {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: 431px) {
+    .text-container{
+        width: 100%;
+    }
+    .clock {
+        font-size: 1.6rem;
+    }
+    .digit-container {
+        width: 25px;
+        height: 40px;
+    }
+    .digit {
+        top: 0px;
+    }
+    .ashok-chakra.bigger-chakra {
+        width: 141.5px;
+        height: 140.5px;
+    }
+}

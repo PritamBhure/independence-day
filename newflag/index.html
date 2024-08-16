@@ -1,0 +1,163 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+"width=device-width, initial-scale=1.0">
+    <title>Independence Day Special</title>
+    <link rel="stylesheet" href="style.css">
+
+  
+    <!-- Link to the favicon -->
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP8gR6VyLeGqPlzvvcn-BcL3WMxzSqisNk2A&s/indian-flag.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP8gR6VyLeGqPlzvvcn-BcL3WMxzSqisNk2A&s/indian-flag.ico" type="image/x-icon">
+
+</head>
+<body>
+    <div class="card-container">
+        <div id="countdown" class="countdown-container">
+            <div class="clock">
+                <div id="day01" class="digit-container">
+                    <div class="digit" id="day1">0</div>
+                </div>
+                <div id="day02" class="digit-container">
+                    <div class="digit" id="day2">0</div>
+                </div>
+                <span id="daySpan">:</span>
+                <div class="digit-container">
+                    <div class="digit" id="hour1">0</div>
+                </div>
+                <div class="digit-container">
+                    <div class="digit" id="hour2">0</div>
+                </div>
+                <span>:</span>
+                <div class="digit-container">
+                    <div class="digit" id="minute1">0</div>
+                </div>
+                <div class="digit-container">
+                    <div class="digit" id="minute2">0</div>
+                </div>
+                <span>:</span>
+                <div class="digit-container">
+                    <div class="digit" id="second1">0</div>
+                </div>
+                <div class="digit-container">
+                    <div class="digit" id="second2">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ourCard" class="text-container">
+            <canvas id="rainingFlowerCanvas"></canvas>
+            <canvas id="confettiCanvas"></canvas>
+            
+            <div id="ourFlag" class="flag-container">
+                <div class="saffron"></div>
+                <div class="white">
+                    <div class="ashok-chakra bigger-chakra">
+                        <div class="spikes bigger-spikes">
+                            <div class="spike bigger-spike" 
+                                 style="--i: 1"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 2"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 3"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 4"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 5"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 6"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 7"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 8"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 9"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 10"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 11"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 12"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 13"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 14"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 15"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 16"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 17"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 18"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 19"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 20"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 21"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 22"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 23"></div>
+                            <div class="spike bigger-spike" 
+                                 style="--i: 24"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="green"></div>
+            </div>
+
+            <h4 class="heading2">Honouring the Past, Celebrating the Future!</h4>
+
+            <div class="spinning-flag-container">
+                <div class="spinning-flag-color greenPolygon"></div>
+                <div class="spinning-flag-color whitePolygon"></div>
+                <div class="spinning-flag-color saffronPolygon">
+                    <div class="ashok-chakra">
+                        <div class="spikes">
+                            <div class="spike" style="--i: 1"></div>
+                            <div class="spike" style="--i: 2"></div>
+                            <div class="spike" style="--i: 3"></div>
+                            <div class="spike" style="--i: 4"></div>
+                            <div class="spike" style="--i: 5"></div>
+                            <div class="spike" style="--i: 6"></div>
+                            <div class="spike" style="--i: 7"></div>
+                            <div class="spike" style="--i: 8"></div>
+                            <div class="spike" style="--i: 9"></div>
+                            <div class="spike" style="--i: 10"></div>
+                            <div class="spike" style="--i: 11"></div>
+                            <div class="spike" style="--i: 12"></div>
+                            <div class="spike" style="--i: 13"></div>
+                            <div class="spike" style="--i: 14"></div>
+                            <div class="spike" style="--i: 15"></div>
+                            <div class="spike" style="--i: 16"></div>
+                            <div class="spike" style="--i: 17"></div>
+                            <div class="spike" style="--i: 18"></div>
+                            <div class="spike" style="--i: 19"></div>
+                            <div class="spike" style="--i: 20"></div>
+                            <div class="spike" style="--i: 21"></div>
+                            <div class="spike" style="--i: 22"></div>
+                            <div class="spike" style="--i: 23"></div>
+                            <div class="spike" style="--i: 24"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wish-container">
+                <p class="para">Wishes you a very</p>
+                <h1 class="heading1">
+                    Happy 78 <sup>th</sup><br>
+                    Independence Day<br> 
+                    2024
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
